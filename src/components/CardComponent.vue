@@ -5,7 +5,6 @@ import router from '@/router';
 const props = defineProps(['item', 'isInFavorite']);
 
 const goToDetailPage = () => {
-  console.log(props.item)
   if (props.isInFavorite == true) {
     router.push({
       name: 'Detail',

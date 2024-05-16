@@ -8,13 +8,18 @@ class Storage {
   // Create
   addItem(item: MovieProps) {
     const list = this.getFavoriteList();
-    list.push(item);
-    localStorage.setItem('favoriteList', JSON.stringify(list));
+    const isOnList = this.getItem(item.id);
+
+    if (!isOnList) {
+      list.push(item);
+      localStorage.setItem('favoriteList', JSON.stringify(list));
+    }
   }
 
   // Read
-  getItem(id: string) {
+  getItem(id: number | string) {
     const list = this.getFavoriteList();
+
     let isOnTheList = false;
 
     list.forEach((element: MovieProps) => {
@@ -27,11 +32,11 @@ class Storage {
   }
 
   // Delete
-  removeItem(id: string) {
+  removeItem(id: number) {
     const list = this.getFavoriteList();
 
     list.forEach((element: MovieProps, index: number) => {
-      if (element.id === Number(id)) {
+      if (element.id === id) {
         list.splice(index, 1);
       }
     });

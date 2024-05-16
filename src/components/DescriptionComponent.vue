@@ -2,8 +2,10 @@
 import storage from '@/services/customStorage';
 import IconYoutube from '@/components/icons/IconYoutube.vue';
 import { getTrailerByID } from '@/services';
+import router from '@/router';
+import { toast } from 'vue3-toastify';
 
-const { stream, type, id, item } = defineProps(['stream', 'type', 'id', "item"]);
+const { stream, type, id } = defineProps(['stream', 'type', 'id']);
 
 const embedLink = await getTrailerByID(type, id).then((data) => {
   if (data) {
@@ -13,16 +15,22 @@ const embedLink = await getTrailerByID(type, id).then((data) => {
   }
 });
 
-const isFavorited = storage.getItem(item);
+const isFavorited = storage.getItem(id);
 
 const addFavorite = () => {
-  storage.addItem(stream);
-  router.go();
+  toast.success('Added on your list of favorites!');
+  setTimeout(() => {
+    storage.addItem(stream);
+    router.go();
+  }, 1000);
 };
 
 const removeFavorite = () => {
-  storage.removeItem(stream.id);
-  router.go();
+  toast.success('Removed on your list of favorites!');
+  setTimeout(() => {
+    storage.removeItem(stream.id);
+    router.go();
+  }, 1000);
 };
 </script>
 
