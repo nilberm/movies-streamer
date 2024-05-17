@@ -58,23 +58,26 @@ const handleCurrentRoute = (value: string) => (value === currentRoute ? 'bg-gray
       </RouterLink>
     </div>
 
-    <nav v-if="!toogleMenu" class="flex flex-col text-white font-semibold bg-gray-800">
+    <nav v-if="!toogleMenu" class="flex flex-col text-white font-semibold bg-gray-800 sm:hidden">
       <RouterLink
         class="px-6 py-4 hover:bg-gray-600"
         :class="handleCurrentRoute('home')"
         :to="{ name: 'home', params: { page: 1 } }"
+        @click="toogleMenu = !toogleMenu"
         >Home</RouterLink
       >
       <RouterLink
         class="px-6 py-4 hover:bg-gray-600"
         :class="handleCurrentRoute('movies')"
         :to="{ name: 'movies', params: { page: 1 } }"
+        @click="toogleMenu = !toogleMenu"
         >Movies</RouterLink
       >
       <RouterLink
         class="px-6 py-4 hover:bg-gray-600"
         :class="handleCurrentRoute('series')"
         :to="{ name: 'series', params: { page: 1 } }"
+        @click="toogleMenu = !toogleMenu"
         >Series</RouterLink
       >
     </nav>
