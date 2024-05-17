@@ -17,5 +17,5 @@ import HeaderComponent from './components/HeaderComponent.vue';
 </template>
 
 <style>
-@import url('@/assets/dist/build.css');
+@import url('@/assets/build.css');
 </style>

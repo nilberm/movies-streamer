@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "tw": "npx tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/dist/build.css --watch"
+    "tw": "npx tailwindcss -i ./src/assets/tailwind.css -o ./src/assets/build.css --watch"
   },
   "dependencies": {
     "axios": "^1.6.8",
