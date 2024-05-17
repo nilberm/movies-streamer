@@ -4,7 +4,7 @@ import HeaderComponent from './components/HeaderComponent.vue';
 </script>
 
 <template>
-  <div class="mainContent">
+  <div class="min-w-[320px]">
     <HeaderComponent />
 
     <Suspense>
