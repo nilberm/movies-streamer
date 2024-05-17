@@ -1,5 +1,5 @@
-import './assets/dist/build.css';
-import './assets/tailwind.css';
+import '@/assets/dist/build.css';
+import '@/assets/tailwind.css';
 import 'vue3-toastify/dist/index.css';
 import { createApp } from 'vue';
 import App from './App.vue';
