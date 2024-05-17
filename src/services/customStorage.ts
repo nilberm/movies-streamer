@@ -44,10 +44,12 @@ class Storage {
   }
 
   getFavoriteList() {
+    // @ts-ignore
     let favoriteList = JSON.parse(localStorage.getItem('favoriteList'));
 
     if (favoriteList == null) {
       this.#createFavoriteList();
+    // @ts-ignore
       favoriteList = JSON.parse(localStorage.getItem('favoriteList'));
     }
 

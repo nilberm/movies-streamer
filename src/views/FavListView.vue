@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import GridComponent from '@/components/GridComponent.vue';
 import { reactive } from 'vue';
-import storage from '@/services/customStorage.ts';
+import storage from '@/services/customStorage';
 const favoriteList = reactive(storage.getFavoriteList());
-
-console.log(favoriteList);
 </script>
 
 <template>

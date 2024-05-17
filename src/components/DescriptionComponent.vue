@@ -21,7 +21,7 @@ const addFavorite = () => {
   toast.success('Added on your list of favorites!');
   setTimeout(() => {
     storage.addItem(stream);
-    router.go();
+    router.go(0);
   }, 1000);
 };
 
@@ -29,7 +29,7 @@ const removeFavorite = () => {
   toast.success('Removed on your list of favorites!');
   setTimeout(() => {
     storage.removeItem(stream.id);
-    router.go();
+    router.go(0);
   }, 1000);
 };
 </script>
@@ -87,14 +87,14 @@ const removeFavorite = () => {
           class="border-2 rounded-lg px-4 py-2 shadow-md cursor-pointer transform transition duration-200 hover:shadow-2xl hover:scale-95 flex items-center font-bold"
           @click="addFavorite"
         >
-          🤍 Favoritar
+          🤍 Save
         </button>
         <button
           v-else
           class="border-2 rounded-lg px-4 py-2 shadow-md cursor-pointer transform transition duration-200 hover:shadow-2xl hover:scale-95 flex items-center font-bold"
           @click="removeFavorite"
         >
-          🤍 Favorito
+          🤍 Remove
         </button>
       </div>
     </div>

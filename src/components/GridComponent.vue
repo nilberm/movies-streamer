@@ -6,7 +6,7 @@ import router from '@/router';
 const props = defineProps(['results', 'page', 'routerType', 'totalPages', 'hasPagination']);
 
 const nextPage = async () => {
-  await router.push(`/${props.routerType}/${props.page + 1}`).then(() => router.go());
+  await router.push(`/${props.routerType}/${props.page + 1}`).then(() => router.go(0));
 };
 
 const previousPage = () => {
@@ -16,7 +16,7 @@ const previousPage = () => {
       params: { page: props.page > 1 ? props.page - 1 : 1 }
     })
     .then(() => {
-      router.go();
+      router.go(0);
     });
 };
 </script>

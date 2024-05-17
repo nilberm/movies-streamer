@@ -8,7 +8,7 @@ import HeaderComponent from './components/HeaderComponent.vue';
     <HeaderComponent />
 
     <Suspense>
-      <RouterView :key="$route.params" />
+      <RouterView />
       <template #fallback>
         <p>Carregando...</p>
       </template>

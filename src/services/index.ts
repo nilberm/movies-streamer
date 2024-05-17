@@ -35,7 +35,6 @@ export async function getTrailerByID(type: string, id: string) {
     .catch((err) => console.error(err));
 
   const dataFiltered = data.results.filter((e: VideoProps) => e.type == 'Trailer');
-  console.log(dataFiltered)
   return dataFiltered.length === 0 ? '' : dataFiltered[0].key;
 }
 
