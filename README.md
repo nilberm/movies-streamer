@@ -1,39 +1,20 @@
-# movies-streamer
 
-This template should help get you started developing with Vue 3 in Vite.
+# Movies Streamer
 
-## Recommended IDE Setup
+Este é um projeto inspirado em um teste para uma vaga de emprego, onde o desafio era desenvolver um site utilizando Vue.js e Tailwind CSS. A aplicação consome a API do The Movie Database (TMDb) para exibir informações sobre filmes e séries.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Funcionalidades
 
-## Type Support for `.vue` Imports in TS
+- Páginas: O site possui as seguintes páginas: Home, Filmes, Séries, Detalhes do Conteúdo e Favoritos.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Recursos Funcionais: Implementei uma lista de favoritos que permite ao usuário salvar seus conteúdos preferidos, paginação para facilitar a navegação entre os resultados e garantia de responsividade para uma experiência consistente em dispositivos móveis e desktops.
 
-## Customize configuration
+## Tecnologias Utilizadas
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Vue.js
+- Tailwind CSS
+- Axios (para requisições HTTP)
+- Git (para controle de versão)
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Deploy
+O projeto está implantado e disponível para visualização online através deste link: [Movies Streamer](https://movies-streamer.vercel.app/)
