@@ -15,3 +15,7 @@ import HeaderComponent from './components/HeaderComponent.vue';
     </Suspense>
   </div>
 </template>
+
+<style>
+@import url('@/assets/dist/build.css');
+</style>
