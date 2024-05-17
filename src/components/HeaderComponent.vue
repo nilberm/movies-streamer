@@ -8,7 +8,7 @@ import router from '@/router';
 
 const toogleMenu = ref(true);
 
-const currentRoute = router.currentRoute._value.name;
+const currentRoute = router.currentRoute.value.name;
 
 const handleCurrentRoute = (value: string) => (value === currentRoute ? 'bg-gray-600' : '');
 </script>
